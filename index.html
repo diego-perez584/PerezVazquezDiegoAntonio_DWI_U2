@@ -1,11 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>oblivion</title>
+  <meta name="description" content="Oblivion Software ofrece certeza en lugares tecnologicos grices." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#inicio">
+      <img class="nav__logo-mark" src="assets/logo-oblivion.png" alt="Oblivion" />
+      oblivion
+    </a>
+    <nav class="nav__links">
+      <a href="#servicios">Servicios</a>
+      <a href="#casos">Casos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav__cta" href="#contacto">Contactanos <span>↗</span></a>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO — parallax scroll ============ -->
+    <!-- 4 capas independientes (data-parallax-layer 1-4), cada una a su propia
+         velocidad. La capa 1 (foto) va sobredimensionada (170% alto, -36% top)
+         para que, sin importar cuánto la traslade el scroll, siga cubriendo
+         toda la pantalla — nunca debe asomar un hueco detrás de ella. -->
+    <section class="hero" id="inicio">
+      <div class="hero__visuals" data-parallax-layers>
+        <img class="parallax__layer-img parallax__layer-img--bg" data-parallax-layer="1"
+             src="assets/background-oblivion.png" alt="" loading="eager" aria-hidden="true" />
+
+        <div class="hero__glow-layer" data-parallax-layer="2" aria-hidden="true">
+          <!-- Textura de grano — exclusiva de la sección principal -->
+          <div class="grain" aria-hidden="true"></div>
+          <div class="hero__glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- Velo fijo (sin data-parallax-layer, no se traslada): siempre entre el
+             fondo/glow y el texto/logo, para que el degradado nunca los oscurezca -->
+        <div class="hero__fade" aria-hidden="true"></div>
+
+        <div class="parallax__layer-title" data-parallax-layer="3">
+          <p class="hero__tagline mono reveal">Oblivion Software Solutions</p>
+        </div>
+
+        <div class="parallax__layer-mark" data-parallax-layer="4">
+          <img class="parallax__layer-img parallax__layer-img--mark reveal"
+               src="assets/logo-oblivion.png" alt="Oblivion" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MANIFIESTO ============ -->
+    <section class="manifesto">
+      <p class="mono section-tag reveal">(01 / 05) — POR QUÉ EXISTIMOS</p>
+      <h2 class="manifesto__wordmark reveal">OBLIVION</h2>
+      <div class="manifesto__grid">
+        <div class="manifesto__body">
+          <p class="manifesto__tagline reveal">
+            Oblivion transforma el estado de incongruencia a un balance techologico:
+            <em>construyendo certeza en espacios grises</em> para crear el futuro.
+          </p>
+          <p class="manifesto__sign mono reveal">Diego Pérez — Fundador, Oblivion</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee-section">
+      <h2 class="marquee-section__title reveal">EN LO QUE TRABAJAMOS</h2>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>AUTOMATIZACIÓN</span><span>◦</span><span>SOFTWARE A MEDIDA</span><span>◦</span>
+          <span>INTEGRACIÓN DE SISTEMAS</span><span>◦</span><span>IDENTIDAD DE MARCA</span><span>◦</span>
+          <span>MARKETING TECNOLÓGICO</span><span>◦</span><span>ARQUITECTURA DE PRODUCTO</span><span>◦</span>
+          <span>ESCALAMIENTO</span><span>◦</span>
+          <span>AUTOMATIZACIÓN</span><span>◦</span><span>SOFTWARE A MEDIDA</span><span>◦</span>
+          <span>INTEGRACIÓN DE SISTEMAS</span><span>◦</span><span>IDENTIDAD DE MARCA</span><span>◦</span>
+          <span>MARKETING TECNOLÓGICO</span><span>◦</span><span>ARQUITECTURA DE PRODUCTO</span><span>◦</span>
+          <span>ESCALAMIENTO</span><span>◦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATEMENT GIGANTE ============ -->
+    <section class="statement">
+      <h2 class="statement__title">
+        <span class="statement__line reveal">ESTRUCTURA</span>
+        <span class="statement__line statement__line--outline reveal">EN EL CAOS</span>
+      </h2>
+      <p class="statement__body reveal">
+        Tu negocio genera más ambigüedad de la que puede resolver solo.
+        Nosotros la ordenamos en sistemas, herramientas y una marca que
+        por fin dicen la verdad sobre lo que ya construiste.
+      </p>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="features" id="servicios">
+      <p class="mono section-tag reveal">(02 / 05) — LOS SERVICIOS</p>
+
+      <div class="features__grid">
+        <article class="feature reveal">
+          <div class="feature__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+              <path d="M21 3v6h-6" />
+            </svg>
+          </div>
+          <span class="feature__number" aria-hidden="true">01</span>
+          <h3 class="feature__title">Oblivion Sync</h3>
+          <p class="feature__desc">
+            Automatización y soluciones integrales para negocios que necesitan
+            integrar tecnología en un proceso — o convertir ese proceso en
+            una ventaja real.
+          </p>
+          <p class="mono feature__pill">PARA QUIEN YA TIENE PROCESOS QUE NO ESCALAN</p>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="m12 2 9 5-9 5-9-5 9-5Z" />
+              <path d="m3 12 9 5 9-5" />
+              <path d="m3 17 9 5 9-5" />
+            </svg>
+          </div>
+          <span class="feature__number" aria-hidden="true">02</span>
+          <h3 class="feature__title">Oblivion Architect</h3>
+          <p class="feature__desc">
+            Construimos software y herramientas propias desde cero —
+            propiedad de tu negocio, diseñadas para la necesidad exacta
+            que ningún producto genérico resuelve.
+          </p>
+          <p class="mono feature__pill">PARA QUIEN NECESITA ALGO QUE AÚN NO EXISTE</p>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" />
+            </svg>
+          </div>
+          <span class="feature__number" aria-hidden="true">03</span>
+          <h3 class="feature__title">Oblivion Ascend</h3>
+          <p class="feature__desc">
+            Estrategia de marca y marketing tecnológico para elevar tu marca
+            personal o la de tu negocio a la altura de lo que realmente
+            has construido.
+          </p>
+          <p class="mono feature__pill">PARA QUIEN YA CONSTRUYÓ ALGO QUE NO SE VE COMO TAL</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CASOS DE USO ============ -->
+    <section class="quotes" id="casos">
+      <p class="mono section-tag reveal">(03 / 05) — CÓMO SE VE EN LA PRÁCTICA</p>
+
+      <figure class="quote-card reveal" aria-label="Casos de uso">
+        <svg class="quote-card__dots" aria-hidden="true">
+          <defs>
+            <pattern id="quote-dot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+              <circle cx="1.5" cy="1.5" r="1"></circle>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#quote-dot-grid)"></rect>
+        </svg>
+        <span class="quote-card__corner quote-card__corner--tl" aria-hidden="true"></span>
+        <span class="quote-card__corner quote-card__corner--tr" aria-hidden="true"></span>
+        <span class="quote-card__corner quote-card__corner--bl" aria-hidden="true"></span>
+        <span class="quote-card__corner quote-card__corner--br" aria-hidden="true"></span>
+
+        <div class="quote-card__content">
+          <p class="mono quote-card__label" id="quote-service">OBLIVION SYNC</p>
+          <blockquote class="quote-card__text">
+            <span id="quote-typed">Un equipo procesa pedidos a mano en tres hojas de cálculo distintas que nunca coinciden. Oblivion Sync conecta ese proceso en un solo sistema — sin rehacer el negocio, solo ordenándolo.</span><span class="quote-card__caret" aria-hidden="true"></span>
+          </blockquote>
+
+          <!-- Fuente de datos para el typewriter — no se renderiza ni se anuncia -->
+          <ul id="quote-source" hidden>
+            <li data-service="OBLIVION SYNC">
+              Un equipo procesa pedidos a mano en tres hojas de cálculo distintas
+              que nunca coinciden. Oblivion Sync conecta ese proceso en un solo
+              sistema — sin rehacer el negocio, solo ordenándolo.
+            </li>
+            <li data-service="OBLIVION ARCHITECT">
+              Ninguna herramienta del mercado resuelve exactamente lo que ese
+              negocio necesita. Oblivion Architect construye esa pieza específica,
+              de cero, como propiedad suya.
+            </li>
+            <li data-service="OBLIVION ASCEND">
+              Una marca con años de trabajo real detrás sigue viéndose como un
+              proyecto a medias. Oblivion Ascend construye la identidad y la
+              presencia digital que ese marca ya merecía.
+            </li>
+          </ul>
+        </div>
+      </figure>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section class="process" id="proceso">
+      <p class="mono section-tag reveal">(04 / 05) — CÓMO FUNCIONA</p>
+
+      <!-- Diagrama del pipeline: mismos 3 pasos, en formato visual -->
+      <div class="pipeline reveal" aria-hidden="true">
+        <header class="pipeline__header">
+          <div class="pipeline__status">
+            <span class="pipeline__status-dot"></span>
+            <span>PROCESO · EN VIVO</span>
+          </div>
+          <span class="pipeline__meta">3 pasos</span>
+        </header>
+
+        <div class="pipeline__visual">
+          <svg class="pipeline__svg" viewBox="0 0 580 172" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <marker id="pipeline-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                <path d="M2 1.5L7.5 5L2 8.5" fill="none" stroke="rgba(143,180,209,0.55)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </marker>
+            </defs>
+
+            <!-- Conexiones -->
+            <path class="pipeline-path" d="M166,88 L224,88" marker-end="url(#pipeline-arrow)" />
+            <path class="pipeline-path" d="M384,88 L442,88" marker-end="url(#pipeline-arrow)" />
+
+            <!-- Partículas -->
+            <circle class="pipeline-particle" r="2.5" style="--particle-path: path('M166,88 L224,88'); --particle-duration: 1.6s; --particle-delay: 0s;"></circle>
+            <circle class="pipeline-particle pipeline-particle--small" r="1.8" style="--particle-path: path('M166,88 L224,88'); --particle-duration: 1.6s; --particle-delay: .55s;"></circle>
+            <circle class="pipeline-particle" r="2.5" style="--particle-path: path('M384,88 L442,88'); --particle-duration: 1.6s; --particle-delay: .3s;"></circle>
+            <circle class="pipeline-particle pipeline-particle--small" r="1.8" style="--particle-path: path('M384,88 L442,88'); --particle-duration: 1.6s; --particle-delay: .85s;"></circle>
+
+            <!-- PASO 01 — Diagnóstico -->
+            <g class="pipeline-node" data-step="1">
+              <rect x="16" y="66" width="150" height="44" rx="8" />
+              <circle class="pipeline-node__dot" cx="32" cy="72" r="2.5" />
+              <text x="99" y="83" text-anchor="middle" class="pipeline-label">PASO 01</text>
+              <text x="99" y="100" text-anchor="middle" class="pipeline-title">Diagnóstico</text>
+            </g>
+
+            <!-- PASO 02 — Diseño de solución -->
+            <g class="pipeline-node" data-step="2">
+              <rect x="224" y="66" width="160" height="44" rx="8" />
+              <circle class="pipeline-node__dot" cx="240" cy="72" r="2.5" />
+              <text x="304" y="83" text-anchor="middle" class="pipeline-label">PASO 02</text>
+              <text x="304" y="100" text-anchor="middle" class="pipeline-title">Diseño de solución</text>
+            </g>
+
+            <!-- PASO 03 — Construcción y lanzamiento -->
+            <g class="pipeline-node" data-step="3">
+              <rect x="442" y="53" width="122" height="70" rx="10" />
+              <circle class="pipeline-node__dot" cx="458" cy="65" r="2.5" />
+              <text x="503" y="80" text-anchor="middle" class="pipeline-label">PASO 03</text>
+              <text x="503" y="98" text-anchor="middle" class="pipeline-title">Construcción</text>
+              <text x="503" y="113" text-anchor="middle" class="pipeline-title">y lanzamiento</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="pipeline__message">
+          <span class="pipeline__prompt">›</span>
+          <div class="pipeline__message-text" id="pipeline-message">
+            Entendemos el espacio gris: tu operación, tus sistemas, tu marca, y dónde exactamente se está perdiendo certeza.
+          </div>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__num mono">PASO 01</div>
+        <div class="step__body">
+          <h3>Diagnóstico</h3>
+          <p>
+            Entendemos el espacio gris: tu operación, tus sistemas, tu marca,
+            y dónde exactamente se está perdiendo certeza.
+          </p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__num mono">PASO 02</div>
+        <div class="step__body">
+          <h3>Diseño De Solucion</h3>
+          <p>
+            Definimos si tu caso pide Sync, Architect, Ascend — o una
+            combinación — y construimos un plan con entregables claros
+            desde el día uno.
+          </p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__num mono">PASO 03</div>
+        <div class="step__body">
+          <h3>Construcción y Lanzamiento</h3>
+          <p>
+            Entregamos, medimos el impacto real, y dejamos tu equipo listo
+            para operarlo — con nosotros disponibles cuando lo necesites.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq" id="faq">
+      <p class="mono section-tag reveal">(05 / 05) — PREGUNTAS FRECUENTES</p>
+      <h2 class="faq__title reveal">Lo que deberías saber antes de empezar.</h2>
+
+      <form class="faq__prompt reveal" id="idea-form">
+        <label class="faq__prompt-label mono" for="idea-input">¿QUÉ TE GUSTARÍA CONSTRUIR?</label>
+
+        <div class="faq__prompt-body">
+          <input
+            class="faq__prompt-input"
+            id="idea-input"
+            type="text"
+            autocomplete="off"
+            aria-label="Cuéntanos qué te gustaría construir"
+          />
+          <span class="faq__prompt-caret" aria-hidden="true"></span>
+        </div>
+
+        <div class="faq__prompt-toolbar">
+          <span class="faq__prompt-agent" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3.5 18.5 7v7L12 17.5 5.5 14V7L12 3.5Z"></path><circle cx="12" cy="10.5" r="2.15"></circle></svg>
+            Oblivion
+          </span>
+          <div class="faq__prompt-spacer"></div>
+          <button type="submit" class="faq__prompt-submit">
+            Enviar
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 16-7-3.2 7L20 17l-16-5Z"></path></svg>
+          </button>
+        </div>
+      </form>
+
+      <div class="faq__list">
+        <div class="faq__item reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>¿Cómo sé qué servicio necesito?</span>
+            <span class="faq__toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__a">
+            <p>
+              No tienes que saberlo antes de hablar con nosotros. En una primera
+              conversación identificamos si tu caso es de automatización (Sync),
+              desarrollo de software propio (Architect), marca (Ascend) — o una
+              combinación de las tres.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>¿Cuánto dura un proyecto?</span>
+            <span class="faq__toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__a">
+            <p>
+              Depende del alcance: una automatización puntual puede tomar
+              semanas; construir una herramienta propia o una marca completa
+              suele tomar más. Definimos el tiempo exacto en la etapa de diseño,
+              con hitos claros desde el inicio.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>¿Trabajan con negocios de cualquier tamaño?</span>
+            <span class="faq__toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__a">
+            <p>
+              Trabajamos mejor con negocios que ya tienen algo real construido
+              — un proceso, un producto o una marca — y necesitan que su
+              tecnología o su presencia estén a la altura de eso.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>¿Qué pasa con la propiedad del software que construyen?</span>
+            <span class="faq__toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__a">
+            <p>
+              Es tuyo. Todo lo que construimos bajo Oblivion Architect queda
+              como propiedad de tu negocio, código y documentación incluidos.
+              No dependes de nosotros para operarlo.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal">
+          <button class="faq__q" aria-expanded="false">
+            <span>¿Cómo empezamos?</span>
+            <span class="faq__toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__a">
+            <p>
+              Escríbenos contándonos qué te gustaría construir. Agendamos una
+              primera llamada sin costo para entender tu caso y, si tiene
+              sentido para ambos, te compartimos una propuesta concreta.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta" id="contacto">
+      <div class="cta__blob cta__blob--1" aria-hidden="true"></div>
+      <div class="cta__blob cta__blob--2" aria-hidden="true"></div>
+      <div class="cta__overlay" aria-hidden="true"></div>
+
+      <div class="cta__content">
+        <h2 class="cta__title">
+          <span class="reveal">HABLEMOS DE TU</span>
+          <span class="cta__outline reveal">PROYECTO</span>
+        </h2>
+
+        <div class="cta__form-wrapper reveal">
+          <div class="cta__form-header">
+            <p class="cta__form-subtitle">Te respondemos en menos de 48 horas.</p>
+          </div>
+          <form id="contact-form" novalidate>
+            <div class="cta__form-row">
+              <div class="cta__field">
+                <label class="sr-only" for="cf-name">Nombre</label>
+                <input class="input-field" type="text" id="cf-name" name="name" placeholder="Nombre" autocomplete="name" required />
+              </div>
+              <div class="cta__field">
+                <label class="sr-only" for="cf-phone">Teléfono</label>
+                <input class="input-field" type="tel" id="cf-phone" name="phone" placeholder="Teléfono" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="cta__field">
+              <label class="sr-only" for="cf-email">Correo</label>
+              <input class="input-field" type="email" id="cf-email" name="email" placeholder="Correo" autocomplete="email" required />
+            </div>
+            <div class="cta__field">
+              <label class="sr-only" for="cf-idea">¿Qué tienes en mente?</label>
+              <textarea class="input-field" id="cf-idea" name="idea" rows="3" placeholder="¿Qué tienes en mente?"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__cols">
+      <div class="footer__col">
+        <p class="mono footer__label">Mapa</p>
+        <a href="#servicios">Servicios</a>
+        <a href="#casos">Casos</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <p class="mono footer__label">CONTACTO</p>
+        <a href="mailto:oblivion_software@gmail.com">oblivion-software@gmail.com</a>
+        <p class="footer__note">Hecho en México,<br />trabajando con negocios de todo el mundo.</p>
+      </div>
+      
+      <div class="footer__col">
+        <p class="mono footer__label">AHORA MISMO</p>
+        <p class="footer__clock mono" id="clock">--:--:--</p>
+        <p class="footer__note mono" id="clock-date"></p>
+        <p class="footer__badge mono">● Agendando proyectos — 2026</p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="mono">© 2026 OBLIVION</p>
+      <p class="footer__tagline">『 Estructura en el caos. 』</p>
+      <a class="mono footer__top" href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
